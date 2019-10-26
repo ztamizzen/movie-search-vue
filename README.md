@@ -1,6 +1,6 @@
 # movie-search-vue
 
-A test from an article [dev.to](https://dev.to/blacksonic/build-a-movie-search-app-using-the-vue-composition-api-5218).
+A test from an article on [dev.to](https://dev.to/blacksonic/build-a-movie-search-app-using-the-vue-composition-api-5218).
 It uses the composition api from Vue 3.
 
 ## Project setup
