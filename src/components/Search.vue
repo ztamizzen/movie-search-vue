@@ -1,6 +1,7 @@
 <template>
   <form class="search">
-    <input type="text" :value="movieTitle" @keyup="handleChange" />
+    <label for="SearchInput">Search for any word in the title</label>
+    <input type="text" :value="movieTitle" @keyup="handleChange" id="SearchInput" />
     <button @click="handleSubmit" type="submit">Search</button>
   </form>
 </template>
@@ -29,12 +30,18 @@ export default {
 <style lang="css">
 .search {
   display: grid;
-  grid-template-columns: 1fr auto;
-  margin-bottom: 1rem;
-  outline: 1px solid firebrick;
-  outline-offset: 0.4rem;
+  grid-template-columns: [start] 1fr [middle] auto [end];
+  margin: 1rem;
+  text-align: left;
+}
+.search label {
+  grid-column: start / end;
 }
 .search input {
   font-size: 1.3rem;
+  grid-column: start / middle;
+}
+.search button {
+  grid-column: middle / end;
 }
 </style>

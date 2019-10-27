@@ -28,7 +28,7 @@ export default {
 </script>
 <style>
 .movie {
-  outline: 1px solid goldenrod;
+  border: 1px solid goldenrod;
   padding: 1rem;
 }
 .movie img {

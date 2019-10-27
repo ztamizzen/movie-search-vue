@@ -11,3 +11,13 @@ export default {
   setup() {}
 };
 </script>
+<style>
+.App-header {
+  background: steelblue;
+}
+.App-header h2 {
+  color: white;
+  margin: 0;
+  padding: 1rem;
+}
+</style>

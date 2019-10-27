@@ -1,36 +1,15 @@
 <template>
   <div id="app">
-    <Header :title="'Composition API'" />
-    <div class="loading" v-if="state.loading">Loading&hellip;</div>
-    <Search :search="state.search" @search="handleSearch" />
-    <div class="movies">
-      <Movie v-for="movie in state.movies" :movie="movie" :key="movie.imdbID" />
-    </div>
+    <Movies />
   </div>
 </template>
 
 <script>
-import Header from "./Header";
-import Search from "./Search";
-import Movie from "./Movie";
-import { useMovieApi } from "./hooks/movie-api";
-
+import Movies from "@/components/Movies";
 export default {
   name: "app",
   components: {
-    Header,
-    Search,
-    Movie
-  },
-  setup() {
-    const state = useMovieApi();
-    return {
-      state,
-      handleSearch(searchTerm) {
-        state.loading = true;
-        state.search = searchTerm;
-      }
-    };
+    Movies
   }
 };
 </script>
@@ -53,13 +32,17 @@ export default {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
+  color: #2c3e50;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 .movies {
   background: rgba(255, 255, 255, 1);
